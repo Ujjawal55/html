@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>FlexBoxImageGallery</title>
+
+        <link rel="shortcut icon" href="projectfavicon.png" type="image/png">
+        <style>
+
+            body {
+                /* this code to center the box.*/
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                background: linear-gradient(to right , rgb(67 , 124 , 205) , rgb(69 , 214 , 202))
+
+            }
+
+
+            .box {
+
+                border: 2px solid 1 black;
+                /* border-radius: 25px; */
+                width: 45%;
+                height: 200px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                overflow: auto;
+                scroll-snap-type: x proximity;
+                scrollbar-width: none; /*to hide the scroll-bar that comes due to overflow.*/
+                /*
+                possible way to center the button:
+                1.
+                    using the position: relative in the parent element
+                    and the position: absoulute in the child element.
+
+                2.
+                    using the display: flex (which convert the parent element to the flex container.)
+                    justify-content: center (which align the child element to the centerwrt main axis.)
+                    align-items: center (which align the child element to the center wrt perpendicular to the main axis.)
+
+                */
+            }
+
+            button {
+
+                width: 172px;
+                height: 172px;
+                border-radius: 25px;
+                margin: 10px;
+                scroll-snap-align: center;
+
+            }
+
+            button img {
+
+                height: 157px;
+                width: 157px;
+
+            }
+
+            button:hover {
+
+                transform: scale(1.1) /*scale property is used to make the element large or small in two-dimesional state.*/
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- <div class="container"></div> -->
+
+            <div class="box">
+
+                <button>
+                   
+                    <a href="https://www.google.com" target="_blank">
+
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png" 
+                            
+                            alt="show me"
+                        />
+
+                    </a>
+               
+    
+                </button>
+
+                <button>
+                   
+                    <a href="https://www.facebook.com" target="_blank">
+
+                        <img 
+
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/300px-Facebook_f_logo_%282021%29.svg.png"
+                            
+                            alt="show me"
+               
+                        />
+
+                    </a>
+    
+                </button>
+
+                <button >
+                   
+                    <a href="https://www.instagram.com" target="_blank">
+
+                        <img class="Instagram"
+                        
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/300px-Instagram_logo_2022.svg.png"
+                            
+                            alt="show me"
+               
+                        />
+
+                    </a>
+    
+                </button>
+
+                <button>
+                   
+                    <a href="https://www.wikipedia.com" target="_blank">
+
+                        <img 
+                        
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/300px-Wikipedia-logo-v2.svg.png"
+                            
+                            alt="show me" 
+               
+                        />
+
+                    </a>
+    
+                </button>
+
+                <button>
+                   
+                    <a href="https://www.reddit.com" target="_blank">
+
+                        <img 
+                        
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Reddit_Logo_Icon.svg/240px-Reddit_Logo_Icon.svg.png"
+                            
+                            alt="show me"
+               
+                        />
+
+                    </a>
+    
+                </button>
+
+            </div>
+
+
+       <!-- </div>  -->
+    </body>
+</html>
